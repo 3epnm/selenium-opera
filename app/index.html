@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demos</title>
+    <script src="fabric-3.min.js"></script>
+    <script src="fabric-brush.min.js"></script>
+</head>
+
+<body>
+    <canvas id="c" width="500" height="500" style="border:1px solid #aaa"></canvas>
+
+    <script id="main">(function () {
+            var canvas = this.__canvas = new fabric.Canvas('c')
+
+            canvas.freeDrawingBrush = new fabric.InkBrush(canvas, {
+                width: 20,
+                opacity: 0.6,
+                color: "#ff0000"
+            })
+
+            canvas.isDrawingMode = true
+        })()
+    </script>
+</body>
+
+</html>
